@@ -18,6 +18,7 @@ int f_run(char *content, stack_t **stack, unsigned int count, FILE *file)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
 		{NULL, NULL}
 	};
 
