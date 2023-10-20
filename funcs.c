@@ -15,7 +15,7 @@ void swap(stack_t **head, unsigned int count)
 		temp = temp->next;
 	if (l < 2)
 	{
-		fprintf(stderr, "L%d: can't swap, stack too short", count);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", count);
 		fclose(part.file);
 		free(part.content);
 		free_stack(*head);
@@ -47,7 +47,7 @@ void add(stack_t **head, unsigned int count)
                 temp = temp->next;
 	if (l < 2)
 	{
-		fprintf(stderr, "L%d: can't add, stack too short", count);
+		fprintf(stderr, "L%d: can't add, stack too short\n", count);
 		fclose(part.file);
 		free(part.content);
 		free_stack(*head);
@@ -86,7 +86,7 @@ void sub(stack_t **head, unsigned int count)
 		temp = temp->next;
 	if (l < 2)
 	{
-		fprintf(stderr, "L%d: can't sub, stack too short", count);
+		fprintf(stderr, "L%d: can't sub, stack too short\n", count);
 		fclose(part.file);
 		free(part.content);
 		free_stack(*head);
