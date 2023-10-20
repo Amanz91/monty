@@ -60,5 +60,6 @@ void push(stack_t **head, unsigned int count);
 void free_stack(stack_t *head);
 void pall(stack_t **head, __attribute__((unused))unsigned int count);
 void pint(stack_t **head, unsigned int count);
+void pop(stack_t **head, unsigned int count);
 
 #endif

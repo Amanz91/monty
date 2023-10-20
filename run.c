@@ -14,6 +14,7 @@ int f_run(char *content, stack_t **stack, unsigned int count, FILE *file)
 	instruction_t ops[] = {{"push", push},
 		{"pall", pall},
 		{"pint", pint},
+		{"pop", pop},
 		{NULL, NULL}
 	};
 
