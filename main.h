@@ -68,4 +68,5 @@ void sub(stack_t **head, unsigned int count);
 void stackf(stack_t **head, unsigned int count);
 void divf(stack_t **head, unsigned int count);
 void mul(stack_t **head, unsigned int count);
+void f_mod(stack_t **head, unsigned int count);
 #endif

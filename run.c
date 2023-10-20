@@ -21,6 +21,7 @@ int f_run(char *content, stack_t **stack, unsigned int count, FILE *file)
 		{"sub", sub},
 		{"div", divf},
 		{"mul", mul},
+		{"mod", f_mod},
 		{"stack", stackf},
 		{NULL, NULL}
 	};
