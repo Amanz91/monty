@@ -16,8 +16,6 @@ void swap(stack_t **head, unsigned int count)
 		temp = temp->next;
 		l++;
 	}
-	temp = *head;
-
 	if (l < 2)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short", count);
@@ -43,7 +41,7 @@ void swap(stack_t **head, unsigned int count)
 void add(stack_t **head, unsigned int count)
 {
 	stack_t *temp;
-	int l, v, s;
+	int l, s;
 
 	l = 0;
 	s = 0;
@@ -54,8 +52,6 @@ void add(stack_t **head, unsigned int count)
 		temp = temp->next;
 		l++;
 	}
-	temp = *head;
-
 	if (l < 2)
 	{
 		fprintf(stderr, "L%d: can't add, stack too short", count);
@@ -65,12 +61,10 @@ void add(stack_t **head, unsigned int count)
 		exit(EXIT_FAILURE);
 	}
 	temp = *head;
-	v = temp->n;
-	temp = temp->next;
-	s = v;
-	v = temp->n;
-	s += v;
-	temp->n = s;
+	s = temp->n + temp->next->n;
+	temp->next->n = s;
+	*head = temp->next;
+	free(temp);
 }
 /**
  * nop - a func that does nothing
