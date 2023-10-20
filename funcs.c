@@ -31,7 +31,6 @@ void swap(stack_t **head, unsigned int count)
 	v = temp->n;
 	temp->n = temp->next->n;
 	temp->next->n = v;
-	*head = temp;
 }
 /**
  * add - a func to swap top 2 elements of stack
