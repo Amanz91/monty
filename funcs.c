@@ -7,9 +7,8 @@
 void swap(stack_t **head, unsigned int count)
 {
 	stack_t *temp;
-	int l, v;
+	int l = 0;
 
-	l = 0;
 	temp = *head;
 
 	while (temp)
@@ -27,13 +26,17 @@ void swap(stack_t **head, unsigned int count)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	temp = *head;
-	v = temp->n;
-	temp->n = temp->next->n;
-	temp->next->n = v;
+	temp = (*head)->next;
+	(*head)->next = temp->next;
+	if (temp->next != NULL)
+		temp->next->prev = *head;
+	temp->next = *head;
+	(*head)->prev = temp;
+	temp->prev = NULL;
+	*head = temp;
 }
 /**
- * add - a func to swap top 2 elements of stack
+ * add - a func to add top 2 elements of stack
  * @head: head
  * @count: line count
  */
