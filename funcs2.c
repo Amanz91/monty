@@ -1,5 +1,4 @@
 #include "main.h"
-}
 /**
  * mul - a func to multiply top 2 elements of stack
  * @head: head
@@ -34,7 +33,7 @@ void mul(stack_t **head, unsigned int count)
  * @head: head
  * @count: line count
  */
-void div(stack_t **head, unsigned int count)
+void divf(stack_t **head, unsigned int count)
 {
 	stack_t *temp;
 	int l, s;
