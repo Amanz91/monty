@@ -19,6 +19,7 @@ int f_run(char *content, stack_t **stack, unsigned int count, FILE *file)
 		{"add", add},
 		{"nop", nop},
 		{"sub", sub},
+		{"stack", stackf},
 		{NULL, NULL}
 	};
 
