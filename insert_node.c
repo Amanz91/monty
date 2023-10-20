@@ -14,8 +14,8 @@ void insert_node(stack_t **head, int n)
 
 	if  (new == NULL)
 	{
-		printf("Error\n");
-		exit(0);
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
 	}
 	if (temp)
 	{
